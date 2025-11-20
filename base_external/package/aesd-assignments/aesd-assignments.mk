@@ -11,7 +11,7 @@ AESD_ASSIGNMENTS_VERSION = 4a2aebacfa647a8a408fdf5ca7504d8b6539e1e6
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
 AESD_ASSIGNMENTS_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-MarkoHammersen.git
-AESD_ASSIGNMENTS_OVERRIDE_SRCDIR = /home/marko/Documents/Linux_UCB_1/assignment-3-and-later-MarkoHammersen
+#AESD_ASSIGNMENTS_OVERRIDE_SRCDIR = /home/marko/Documents/Linux_UCB_1/assignment-3-and-later-MarkoHammersen
 AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
