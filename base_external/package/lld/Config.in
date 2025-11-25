@@ -1,0 +1,6 @@
+
+config BR2_PACKAGE_AESD_ASSIGNMENTS
+	bool "lld"
+	help
+		misc-modules and scull
+
