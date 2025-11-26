@@ -5,6 +5,8 @@ device=$1
 # Support read/write for owner and group, read only for everyone using 644
 mode="664"
 
+echo "$0 called with $# arguments"
+
 if [ $# -ne 1 ]; then
 	echo "Wrong number of arguments"
 	echo "usage: $0 module_name"
@@ -22,10 +24,12 @@ else
 fi
 
 echo "Load our module, exit on failure"
-insmod ./$module.ko $* || exit 1
+insmod /lib/modules/$(uname -r)/extra/"$module".ko || exit 1
+
 echo "Get the major number (allocated with allocate_chrdev_region) from /proc/devices"
 major=$(awk "\$2==\"$module\" {print \$1}" /proc/devices)
 if [ ! -z ${major} ]; then
+    echo "Found major number ${major} for driver ${module}"
     echo "Remove any existing /dev node for /dev/${device}"
     rm -f /dev/${device}
     echo "Add a node for our device at /dev/${device} using mknod"

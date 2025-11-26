@@ -1,6 +1,5 @@
-
 config BR2_PACKAGE_LDD3
 	bool "ldd3"
+	depends on BR2_LINUX_KERNEL
 	help
 		misc-modules and scull
-
