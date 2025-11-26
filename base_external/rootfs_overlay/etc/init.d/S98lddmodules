@@ -5,14 +5,14 @@ set -e # Exit on error
 case "$1" in
   start)
     echo "Loading kernel modules for ldd functionality..."
-    /etc/init.d/lld_scripts/scull_load
-    /etc/init.d/lld_scripts/module_load faulty
+    /etc/init.d/ldd3_scripts/scull_load
+    /etc/init.d/ldd3_scripts/module_load faulty
     modprobe hello
     ;;
   stop)
     echo "Unloading ldd kernel modules..."
-    /etc/init.d/lddmodules/scull_unload
-    /etc/init.d/lddmodules/module_unload faulty
+    /etc/init.d/ldd3_scripts/scull_unload
+    /etc/init.d/ldd3_scripts/module_unload faulty
     rmmod hello
     ;;
   *)

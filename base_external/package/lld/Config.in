@@ -1,6 +1,0 @@
-
-config BR2_PACKAGE_LLD
-	bool "lld"
-	help
-		misc-modules and scull
-
